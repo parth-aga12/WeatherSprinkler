@@ -51,11 +51,9 @@ void loop() {
         // Check precipitation amount
         if (precipitation_amount > 2) {
           // Don't water
-          // Add code to stop or not start the watering system
         } else {
           // Water for 5 minutes
-          // Add code to start the watering system
-          waterFor(5); // Assuming you have a function to handle the watering
+          waterFor(5);
         }
 
     } else {
@@ -73,7 +71,7 @@ void loop() {
   // If additional conditions are needed, add below
 }
 
-// Function to handle watering for a specified number of minutes
+// Function for watering for a specified number of minutes
 void waterFor(int minutes) {
 // Turn the servo to 90 degrees to open the valve
   myservo.write(90); 
