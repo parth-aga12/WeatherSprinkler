@@ -1,14 +1,15 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <ArduinoJson.h>
+#include <Servo.h>
 
-// Replace with your network credentials
-const char* ssid = "YOUR_SSID";
-const char* password = "YOUR_PASSWORD";
+// Network credentials
+const char* ssid = "CloudWifi-617";
+const char* password = ""; // no password
 
 WiFiClient client;
 HTTPClient http;
-String apiEndPoint = "https://api.open-meteo.com/v1/forecast?latitude=YOUR_LATITUDE&longitude=YOUR_LONGITUDE&hourly=precipitation_probability,precipitation_amount";
+String apiEndPoint = "https://api.open-meteo.com/v1/forecast?latitude=43.4668&longitude=-80.5164&hourly=rain";
 Servo myservo;  // create servo object to control a servo
 
 void setup() {
